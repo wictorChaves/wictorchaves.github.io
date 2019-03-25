@@ -93,9 +93,9 @@ figure figcaption {
   position: relative;
 }
 
+
 #colorlib-aside {
-  padding-top: 3em;
-  padding-bottom: 40px;
+  padding-top: 2em;
   float: left;
   width: 300px;
   position: fixed;
@@ -107,16 +107,17 @@ figure figcaption {
   transition: 0.5s;
   left: 0;
   overflow: auto;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
   #colorlib-aside {
     width: 300px;
-    -moz-transform: translateX(-300px);
-    -webkit-transform: translateX(-300px);
-    -ms-transform: translateX(-300px);
-    -o-transform: translateX(-300px);
-    transform: translateX(-300px);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
     padding-top: 4em;
   }
 }
@@ -300,7 +301,15 @@ figure figcaption {
 @media screen and (max-width: 768px) {
   #colorlib-main {
     width: 100%;
+  }
+  #colorlib-main > section{
     padding: 0 1em;
+  }
+  #colorlib-main > section:first-child{
+    padding: 0;
+  }
+  #colorlib-hero ul.slides li.flex-active-slide:nth-child(2) div.container-fluid .desc .btn-learn{
+    background: white !important;
   }
 }
 
@@ -481,7 +490,7 @@ body.offcanvas #colorlib-aside {
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
-  width: 300px;
+  width: 100%;
   background: #f2f3f7;
   z-index: 999;
   position: fixed;
@@ -489,11 +498,12 @@ body.offcanvas #colorlib-aside {
 
 body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
   top: 0;
-  -moz-transform: translateX(300px);
-  -webkit-transform: translateX(300px);
-  -ms-transform: translateX(300px);
-  -o-transform: translateX(300px);
-  transform: translateX(300px);
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  right: 80px;
 }
 
 .colorlib-narrow-content {
